@@ -1,0 +1,184 @@
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+  height: 20rem;
+}
+
+// Code mirror default style (do not affect the console style)
+.CodeMirror.cm-s-default {
+  background: #0d1117;
+  color: #e6edf3;
+
+  // @see: issue #17705
+  div.CodeMirror-scroll {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
+  div.CodeMirror-code,
+  pre.CodeMirror-line,
+  pre.CodeMirror-line-like {
+    color: #e6edf3;
+  }
+
+  .CodeMirror-gutters {
+    background: #161b22;
+    border-right: 1px solid #30363d;
+  }
+
+  .CodeMirror-linenumber {
+    color: #6a737d;
+  }
+
+  .CodeMirror-cursor {
+    border-left-color: #e6edf3;
+  }
+
+  .CodeMirror-selected {
+    background: #2d3748;
+  }
+
+  .CodeMirror-activeline-background {
+    background: #1c2128;
+  }
+
+  span {
+    &.cm-keyword,
+    &.cm-statement-verb {
+      color: #ff7b72;
+    }
+
+    &.cm-variable {
+      color: #e6edf3;
+    }
+
+    &.cm-comment {
+      color: #8b949e;
+    }
+
+    &.cm-mysql-string {
+      color: #a5d6ff;
+    }
+
+    &.cm-operator {
+      color: #e6edf3;
+    }
+
+    &.cm-mysql-word {
+      color: #e6edf3;
+    }
+
+    &.cm-builtin {
+      color: #ffa657;
+    }
+
+    &.cm-variable-2 {
+      color: #ffa657;
+    }
+
+    &.cm-variable-3 {
+      color: #79c0ff;
+    }
+
+    &.cm-separator {
+      color: #e6edf3;
+    }
+
+    &.cm-number {
+      color: #79c0ff;
+    }
+  }
+}
+
+// Inline SQL syntax highlight (result_query / sliding message areas)
+div.sql-highlight.cm-s-default {
+  color: #c9d1d9;
+
+  span {
+    &.cm-keyword,
+    &.cm-statement-verb {
+      color: #ff7b72;
+    }
+
+    &.cm-variable {
+      color: #c9d1d9;
+    }
+
+    &.cm-comment {
+      color: #8b949e;
+    }
+
+    &.cm-mysql-string {
+      color: #a5d6ff;
+    }
+
+    &.cm-operator {
+      color: #c9d1d9;
+    }
+
+    &.cm-mysql-word {
+      color: #c9d1d9;
+    }
+
+    &.cm-builtin {
+      color: #ffa657;
+    }
+
+    &.cm-variable-2 {
+      color: #ffa657;
+    }
+
+    &.cm-variable-3 {
+      color: #79c0ff;
+    }
+
+    &.cm-separator {
+      color: #c9d1d9;
+    }
+
+    &.cm-number {
+      color: #79c0ff;
+    }
+  }
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * 0.4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-height: ceil($textarea-rows * 0.6em);
+  min-width: ceil($textarea-cols * 0.6em);
+  border: 1px solid #30363d;
+}
+
+#pma_console .CodeMirror-gutters {
+  background-color: initial;
+  border: none;
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  display: inline-block;
+  float: right;
+  color: #666;
+  margin-left: 1em;
+}
+
+.CodeMirror-hints {
+  z-index: 1999;
+}
+
+.CodeMirror-lint-tooltip {
+  z-index: 2000;
+  font-family: inherit;
+
+  code {
+    font-family: monospace;
+    font-weight: bold;
+  }
+}
