@@ -1,7 +1,7 @@
 {
-    "name": "pmahomme",
+    "name": "pmahomme-dark",
     "version": "5.0",
-    "description": "Default phpMyAdmin theme",
+    "description": "Default phpMyAdmin dark theme",
     "author": "phpMyAdmin developers",
     "url": "https://www.phpmyadmin.net/",
     "supports": ["5.0", "5.1", "5.2"]
