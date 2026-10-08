@@ -14,45 +14,6 @@ A dark theme for [phpMyAdmin](https://www.phpmyadmin.net/), styled after GitHub'
 |---|---|
 | 5.0 | 5.0, 5.1, 5.2 |
 
-## Project Structure
-
-```
-pmahomme/
-├── theme.json          # Theme metadata (name, version, author, compatibility)
-├── screen.png          # Preview screenshot shown in the theme picker
-├── css/
-│   ├── theme.css       # Compiled CSS (production-ready)
-│   ├── theme.css.map   # Source map for debugging
-│   └── theme.rtl.css   # Right-to-left compiled CSS
-├── scss/
-│   ├── theme.scss      # Entry point — imports all partials
-│   ├── _variables.scss # All design tokens (colors, spacing, typography)
-│   ├── _common.scss    # Base layout and shared rules
-│   ├── _navigation.scss# Left navigation panel
-│   ├── _designer.scss  # Visual database designer
-│   ├── _codemirror.scss# SQL editor (CodeMirror)
-│   ├── _icons.scss     # Icon sprite overrides
-│   ├── _tables.scss    # Data browse tables
-│   ├── _forms.scss     # Input fields and form controls
-│   ├── _buttons.scss   # Button variants
-│   ├── _navbar.scss    # Top navigation bar
-│   ├── _card.scss      # Card components
-│   ├── _modal.scss     # Modal dialogs
-│   ├── _alert.scss     # Alert / flash messages
-│   ├── _pagination.scss# Pagination controls
-│   ├── _breadcrumb.scss# Breadcrumb navigation
-│   ├── _nav.scss       # Generic nav tabs / pills
-│   ├── _list-group.scss# List group component
-│   ├── _print.scss     # Print stylesheet
-│   ├── _reboot.scss    # CSS reset overrides
-│   ├── _jqplot.scss    # jqPlot chart styles
-│   └── _enum-editor.scss# Enum/set field editor
-├── img/                # 190+ PNG/SVG/ICO icon assets
-└── jquery/
-    ├── jquery-ui.css   # jQuery UI stylesheet
-    └── images/         # jQuery UI icons
-```
-
 ## Installation
 
 1. Copy the `pmahomme` directory into your phpMyAdmin `themes/` folder:
@@ -62,55 +23,6 @@ pmahomme/
    ```
 
 2. Log in to phpMyAdmin, go to **Settings → Themes**, and select **pmahomme**.
-
-## Customization
-
-All design tokens live in [scss/_variables.scss](scss/_variables.scss). Key variables:
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `$body-bg` | `#0d1117` | Page background |
-| `$navi-background` | `#161b22` | Left nav background |
-| `$main-color` | `#c9d1d9` | Body text color |
-| `$link-color` | `#6cb6ff` | Link color |
-| `$navi-width` | `240px` | Left navigation panel width |
-| `$font-family-base` | `sans-serif` | Base font |
-| `$font-size-base` | `0.82rem` | Base font size |
-
-After editing variables, recompile the SCSS:
-
-```bash
-# Using sass CLI
-sass scss/theme.scss css/theme.css --style=compressed --source-map
-
-# RTL variant
-sass scss/theme.scss css/theme.rtl.css --style=compressed --no-source-map
-```
-
-## Color Palette
-
-The theme uses GitHub's dark color scale:
-
-| Token | Hex | Usage |
-|---|---|---|
-| Canvas default | `#0d1117` | Page background |
-| Canvas subtle | `#161b22` | Navigation, table rows |
-| Canvas overlay | `#1c2128` | Table headers, secondary surfaces |
-| Border default | `#30363d` | Borders and dividers |
-| Fg default | `#c9d1d9` | Body text |
-| Fg muted | `#a9b2bc` | Muted / secondary text (`#b1bac4` on raised surfaces) |
-| Accent emphasis | `#0b4fb3` | Active states, primary buttons (white text) |
-| Accent fg | `#6cb6ff` | Links |
-| Danger fg | `#ffa198` | Error and warning text |
-| Success fg | `#7ee787` | Success text |
-
-## Accessibility
-
-Text colors target the WCAG 2.x Level AAA contrast ratio (SC 1.4.6): at least 7:1 for normal text and 4.5:1 for large text against the surface they sit on. Bootstrap's `$min-contrast-ratio` is set to `7` so generated button and badge text follows the same target.
-
-When changing a color in [scss/_variables.scss](scss/_variables.scss), check it against every surface it is used on (`#0d1117`, `#161b22`, `#1c2128`, `#21262d`, and `#30363d` for body text).
-
-Not covered: disabled controls (exempt under WCAG), border / non-text contrast, the visual designer canvas, and the bundled `jquery/jquery-ui.css`, which keep their original light styling.
 
 ## RTL Support
 
