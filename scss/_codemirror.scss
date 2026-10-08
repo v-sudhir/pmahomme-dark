@@ -28,7 +28,7 @@ $textarea-rows: 15;
   }
 
   .CodeMirror-linenumber {
-    color: #6a737d;
+    color: $fg-muted;
   }
 
   .CodeMirror-cursor {
@@ -36,7 +36,7 @@ $textarea-rows: 15;
   }
 
   .CodeMirror-selected {
-    background: #2d3748;
+    background: #212b3f;
   }
 
   .CodeMirror-activeline-background {
@@ -46,7 +46,7 @@ $textarea-rows: 15;
   span {
     &.cm-keyword,
     &.cm-statement-verb {
-      color: #ff7b72;
+      color: $fg-danger;
     }
 
     &.cm-variable {
@@ -54,7 +54,7 @@ $textarea-rows: 15;
     }
 
     &.cm-comment {
-      color: #8b949e;
+      color: $fg-muted-raised;
     }
 
     &.cm-mysql-string {
@@ -87,6 +87,35 @@ $textarea-rows: 15;
 
     &.cm-number {
       color: #79c0ff;
+    }
+
+    &.cm-string,
+    &.cm-string-2 {
+      color: #a5d6ff;
+    }
+
+    &.cm-atom,
+    &.cm-def,
+    &.cm-type {
+      color: #79c0ff;
+    }
+
+    &.cm-meta,
+    &.cm-qualifier,
+    &.cm-bracket,
+    &.cm-punctuation,
+    &.cm-property {
+      color: #e6edf3;
+    }
+
+    &.cm-error,
+    &.cm-invalidchar,
+    &.CodeMirror-nonmatchingbracket {
+      color: $fg-danger;
+    }
+
+    &.CodeMirror-matchingbracket {
+      color: $fg-success;
     }
   }
 }
@@ -98,7 +127,7 @@ div.sql-highlight.cm-s-default {
   span {
     &.cm-keyword,
     &.cm-statement-verb {
-      color: #ff7b72;
+      color: $fg-danger;
     }
 
     &.cm-variable {
@@ -106,7 +135,7 @@ div.sql-highlight.cm-s-default {
     }
 
     &.cm-comment {
-      color: #8b949e;
+      color: $fg-muted-raised;
     }
 
     &.cm-mysql-string {
@@ -139,6 +168,35 @@ div.sql-highlight.cm-s-default {
 
     &.cm-number {
       color: #79c0ff;
+    }
+
+    &.cm-string,
+    &.cm-string-2 {
+      color: #a5d6ff;
+    }
+
+    &.cm-atom,
+    &.cm-def,
+    &.cm-type {
+      color: #79c0ff;
+    }
+
+    &.cm-meta,
+    &.cm-qualifier,
+    &.cm-bracket,
+    &.cm-punctuation,
+    &.cm-property {
+      color: #c9d1d9;
+    }
+
+    &.cm-error,
+    &.cm-invalidchar,
+    &.CodeMirror-nonmatchingbracket {
+      color: $fg-danger;
+    }
+
+    &.CodeMirror-matchingbracket {
+      color: $fg-success;
     }
   }
 }
@@ -165,7 +223,7 @@ div.sql-highlight.cm-s-default {
 .autocomplete-column-hint {
   display: inline-block;
   float: right;
-  color: #666;
+  color: #555;
   margin-left: 1em;
 }
 

@@ -123,7 +123,7 @@
   margin: 0;
   margin-left: 5px;
   overflow: hidden;
-  color: #444;
+  color: $navi-color;
   height: 74%;
   position: relative;
 
@@ -328,7 +328,7 @@ li.fast_filter {
   .searchClauseClear {
     border: 0;
     font-weight: bold;
-    color: #800;
+    color: $fg-danger;
     font-size: 0.7em;
   }
 

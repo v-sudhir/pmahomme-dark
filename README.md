@@ -98,9 +98,19 @@ The theme uses GitHub's dark color scale:
 | Canvas overlay | `#1c2128` | Table headers, secondary surfaces |
 | Border default | `#30363d` | Borders and dividers |
 | Fg default | `#c9d1d9` | Body text |
-| Fg muted | `#8b949e` | Muted / secondary text |
-| Accent emphasis | `#1f6feb` | Active states, primary buttons |
+| Fg muted | `#a9b2bc` | Muted / secondary text (`#b1bac4` on raised surfaces) |
+| Accent emphasis | `#0b4fb3` | Active states, primary buttons (white text) |
 | Accent fg | `#6cb6ff` | Links |
+| Danger fg | `#ffa198` | Error and warning text |
+| Success fg | `#7ee787` | Success text |
+
+## Accessibility
+
+Text colors target the WCAG 2.x Level AAA contrast ratio (SC 1.4.6): at least 7:1 for normal text and 4.5:1 for large text against the surface they sit on. Bootstrap's `$min-contrast-ratio` is set to `7` so generated button and badge text follows the same target.
+
+When changing a color in [scss/_variables.scss](scss/_variables.scss), check it against every surface it is used on (`#0d1117`, `#161b22`, `#1c2128`, `#21262d`, and `#30363d` for body text).
+
+Not covered: disabled controls (exempt under WCAG), border / non-text contrast, the visual designer canvas, and the bundled `jquery/jquery-ui.css`, which keep their original light styling.
 
 ## RTL Support
 

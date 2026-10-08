@@ -274,7 +274,7 @@ select {
 }
 
 .separator {
-  color: #484f58;
+  color: $fg-muted;
   text-shadow: none;
 }
 
@@ -366,7 +366,7 @@ tr:last-child td.condition {
  */
 td.null {
   font-style: italic;
-  color: #7d7d7d !important;
+  color: $fg-muted !important;
 }
 
 table {
@@ -501,17 +501,17 @@ div.tools a:hover,
 
 // disabled text
 .disabled {
-  color: #666;
+  color: $fg-muted;
 
   a {
     &:link,
     &:active,
     &:visited {
-      color: #666;
+      color: $fg-muted;
     }
 
     &:hover {
-      color: #666;
+      color: $fg-muted;
       text-decoration: none;
     }
   }
@@ -597,7 +597,7 @@ label.col-3.d-flex.align-items-center {
 }
 
 .color_gray {
-  color: gray;
+  color: $fg-muted;
 }
 
 .max_height_400 {
@@ -804,8 +804,8 @@ div {
 }
 
 div#chartVariableSettings {
-  border: 1px solid #ddd;
-  background-color: #e6e6e6;
+  border: 1px solid #30363d;
+  background-color: #21262d;
   margin-left: 10px;
 }
 
@@ -816,7 +816,7 @@ table#chartGrid {
   }
 
   div.monitorChart {
-    background: #ebebeb;
+    background: #161b22;
     border: none;
     min-width: 1px;
   }
@@ -1136,13 +1136,13 @@ input {
   &[type=password].invalid_value,
   &[type=number].invalid_value,
   &[type=date].invalid_value {
-    background: #fcc;
+    background: #4a1515;
   }
 }
 
 select.invalid_value,
 .invalid_value {
-  background: #fcc;
+  background: #4a1515;
 }
 
 /**
@@ -1169,9 +1169,10 @@ select.invalid_value,
   background-repeat: no-repeat;
   background-position: 2%;
   border: 1px solid #e2b709;
-  background-color: #ffe57e;
+  background-color: $browse-marker-background;
+  color: $browse-marker-color;
   border-radius: 5px;
-  box-shadow: 0 5px 90px #888;
+  box-shadow: 0 5px 90px #000;
 }
 
 #loading_parent {
@@ -1319,7 +1320,7 @@ table#index_columns {
       margin-left: 0;
       padding: 0;
       list-style: none;
-      color: #9a0000;
+      color: $fg-danger;
       font-size: small;
     }
 
@@ -1331,7 +1332,7 @@ table#index_columns {
       margin-left: 1em;
       font-size: 80%;
       text-transform: uppercase;
-      color: #e00;
+      color: $fg-danger;
       cursor: help;
     }
 
@@ -1350,7 +1351,7 @@ table#index_columns {
         font-weight: normal;
         font-family: $font-family-base;
         font-size: x-small;
-        color: #444;
+        color: $fg-muted;
       }
     }
 
@@ -1374,13 +1375,13 @@ table#index_columns {
     &.custom {
       padding: 1px;
       border: 1px #edec90 solid;
-      background: #ffc;
+      background: $browse-marker-background;
     }
   }
 
   // customized field
   .custom {
-    background: #ffc;
+    background: $browse-marker-background;
   }
 
   .field-error {
@@ -1396,7 +1397,7 @@ table#index_columns {
 
       &:focus {
         border: 1px #6676ff solid;
-        background: #f7fbff;
+        background: $input-focus-bg;
       }
     }
   }
@@ -1408,13 +1409,13 @@ table#index_columns {
 
     &:focus {
       border: 1px #6676ff solid;
-      background: #f7fbff;
+      background: $input-focus-bg;
     }
   }
 
   .field-comment-mark {
     font-family: serif;
-    color: #007;
+    color: $link-color;
     cursor: help;
     padding: 0 0.2em;
     font-weight: bold;
@@ -1422,7 +1423,7 @@ table#index_columns {
   }
 
   .field-comment-warning {
-    color: #a00;
+    color: $fg-danger;
   }
 
   // error list
@@ -1462,18 +1463,18 @@ fieldset {
 
   .disabled-field {
     th {
-      color: #666;
-      background-color: #ddd;
+      color: $fg-muted-raised;
+      background-color: #21262d;
 
       small {
-        color: #666;
-        background-color: #ddd;
+        color: $fg-muted-raised;
+        background-color: #21262d;
       }
     }
 
     td {
-      color: #666;
-      background-color: #ddd;
+      color: $fg-muted-raised;
+      background-color: #21262d;
     }
   }
 }
@@ -1510,8 +1511,8 @@ input#auto_increment_opt {
 
   div.button {
     font-size: smaller;
-    color: #999;
-    background-color: #eee;
+    color: $main-color;
+    background-color: #21262d;
     padding: 2px;
   }
 }
@@ -1584,7 +1585,7 @@ input#auto_increment_opt {
   position: fixed;
   top: 55px;
   width: 100%;
-  background: #fff;
+  background: $body-bg;
 }
 
 #table_columns {
@@ -1877,14 +1878,14 @@ input#auto_increment_opt {
   position: absolute;
 
   input[type=text] {
-    background: #fff;
+    background: $input-bg;
     height: 100%;
     margin: 0;
     padding: 0;
   }
 
   .edit_area {
-    background: #fff;
+    background: $input-bg;
     border: 1px solid #999;
     min-width: 10em;
     padding: 0.3em 0.5em;
@@ -1896,7 +1897,7 @@ input#auto_increment_opt {
   }
 
   .cell_edit_hint {
-    color: #555;
+    color: $fg-muted-raised;
     font-size: 0.8em;
     margin: 0.3em 0.2em;
   }
@@ -1919,8 +1920,8 @@ input#auto_increment_opt {
   }
 
   .goto_link {
-    background: #eee;
-    color: #555;
+    background: #30363d;
+    color: $main-color;
     padding: 0.2em 0.3em;
   }
 }
@@ -2247,7 +2248,7 @@ textarea {
       &.expanded::before,
       &:hover::before {
         content: "=";
-        color: #944;
+        color: $fg-danger;
       }
     }
 
@@ -2356,12 +2357,12 @@ textarea {
     .bookmark_label {
       padding: 0 4px;
       top: 0;
-      background: #369;
+      background: #245a8f;
       color: #fff;
       border-radius: 3px;
 
       &.shared {
-        background: #396;
+        background: $success;
       }
     }
 
@@ -2556,34 +2557,34 @@ textarea {
   bottom: 0;
   right: 25px;
   width: 400px;
-  border: 1px solid #999;
-  background: #f3f3f3;
+  border: 1px solid #30363d;
+  background: #161b22;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px #ccc;
+  box-shadow: 2px 2px 5px #000;
 
   h2 {
-    background-color: #bbb;
+    background-color: #21262d;
     padding: 0.1em 0.3em;
     margin-top: 0;
     margin-bottom: 0;
-    color: #fff;
+    color: #c9d1d9;
     font-size: 1.6em;
     font-weight: normal;
-    text-shadow: 0 1px 0 #777;
-    box-shadow: 1px 1px 15px #999 inset;
+    text-shadow: none;
+    box-shadow: 1px 1px 15px #000 inset;
   }
 }
 
 .pma_drop_result h2 {
-  background-color: #bbb;
+  background-color: #21262d;
   padding: 0.1em 0.3em;
   margin-top: 0;
   margin-bottom: 0;
-  color: #fff;
+  color: #c9d1d9;
   font-size: 1.6em;
   font-weight: normal;
-  text-shadow: 0 1px 0 #777;
-  box-shadow: 1px 1px 15px #999 inset;
+  text-shadow: none;
+  box-shadow: 1px 1px 15px #000 inset;
 }
 
 .pma_sql_import_status {
@@ -2596,7 +2597,7 @@ textarea {
     li {
       padding: 8px 10px;
       border-bottom: 1px solid #30363d;
-      color: #f85149;
+      color: $fg-danger;
       background: #1c2128;
 
       .filesize {
@@ -2662,8 +2663,8 @@ textarea {
 }
 
 .dependencies_box {
-  background-color: white;
-  border: 3px ridge black;
+  background-color: $navi-background;
+  border: 3px ridge #30363d;
 }
 
 #composite_index_list {
@@ -2803,7 +2804,7 @@ body .ui-dialog {
 
 #tooltip_editor {
   font-size: 12px;
-  background-color: #fff;
+  background-color: #21262d;
   opacity: 0.95;
   filter: alpha(opacity=95);
   padding: 5px;
@@ -2877,5 +2878,5 @@ body .ui-dialog {
 }
 
 .bg-secondary {
-  color: #333;
+  color: $main-color;
 }

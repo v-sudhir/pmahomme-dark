@@ -23,6 +23,13 @@ $navi-pointer-background: #2d3748;
 // foreground (text) color for the main frame
 $main-color: #c9d1d9;
 
+// foreground (text) color for muted / secondary text (7:1 on surfaces up to #21262d)
+$fg-muted: #a9b2bc;
+// muted text on raised surfaces (7:1 on #21262d)
+$fg-muted-raised: #b1bac4;
+// foreground (text) color for errors and warnings
+$fg-danger: #ffa198;
+
 // foreground (text) color of the pointer in browse mode
 $browse-pointer-color: #f0f6fc;
 
@@ -101,8 +108,20 @@ $enable-gradients: true;
 $enable-shadows: true;
 $enable-transitions: false;
 
-$primary: #1f6feb;
+// minimum contrast ratio Bootstrap uses to pick text colors (WCAG AAA)
+$min-contrast-ratio: 7;
+
+$primary: #0b4fb3;
 $secondary: #21262d;
+$success: #116139;
+$danger: #a52834;
+
+// foreground (text) color for success states
+$fg-success: #7ee787;
+
+$body-secondary-color: $fg-muted-raised;
+$code-color: #f7a8d8;
+$mark-color: #1c2128;
 
 $btn-border-radius: 0.85rem;
 $btn-line-height: 1.15;
@@ -116,7 +135,7 @@ $dropdown-item-padding-x: 0;
 // Forms
 
 $form-check-input-margin-y: 0.1rem;
-$form-check-input-checked-bg-color: #1f6feb;
+$form-check-input-checked-bg-color: #0b4fb3;
 
 // Navs
 
@@ -137,10 +156,10 @@ $navbar-light-disabled-color: #484f58;
 
 // Pagination
 
-$pagination-active-color: #58a6ff;
+$pagination-active-color: #fff;
 $pagination-border-color: #30363d;
 $pagination-hover-border-color: #30363d;
-$pagination-active-border-color: #1f6feb;
+$pagination-active-border-color: #0b4fb3;
 $pagination-disabled-border-color: #30363d;
 
 // Card
@@ -153,7 +172,7 @@ $card-cap-bg: #1c2128;
 
 $accordion-button-padding-y: 0.375rem;
 $accordion-button-padding-x: 0.75rem;
-$accordion-button-active-color: #58a6ff;
+$accordion-button-active-color: $link-color;
 $accordion-button-active-bg: $navi-background;
 
 // Breadcrumbs
@@ -162,7 +181,7 @@ $breadcrumb-navbar-padding-y: 0.1rem;
 $breadcrumb-navbar-padding-x: 2.2em;
 $breadcrumb-navbar-margin-bottom: 0;
 $breadcrumb-navbar-bg: #30363d;
-$breadcrumb-divider-color: #8b949e;
+$breadcrumb-divider-color: #c9d1d9;
 $breadcrumb-divider: quote("»");
 
 // Modals
@@ -183,7 +202,7 @@ $modal-backdrop-opacity: 0.7;
 $input-bg: #21262d;
 $input-color: #c9d1d9;
 $input-border-color: #30363d;
-$input-placeholder-color: #6a737d;
+$input-placeholder-color: $fg-muted-raised;
 $input-focus-bg: #21262d;
 $input-focus-border-color: #58a6ff;
 $input-focus-color: #c9d1d9;
@@ -192,6 +211,10 @@ $input-disabled-border-color: #30363d;
 $input-group-addon-bg: #1c2128;
 $input-group-addon-color: #c9d1d9;
 $input-group-addon-border-color: #30363d;
+$form-file-button-bg: #30363d;
+$form-file-button-hover-bg: #2d333b;
+$form-feedback-valid-color: $fg-success;
+$form-feedback-invalid-color: $fg-danger;
 
 // Form select
 
@@ -201,7 +224,7 @@ $form-select-border-color: #30363d;
 $form-select-focus-border-color: #58a6ff;
 $form-select-disabled-bg: #1c2128;
 $form-select-disabled-color: #6a737d;
-$form-select-indicator-color: #8b949e;
+$form-select-indicator-color: $fg-muted-raised;
 
 // Dropdowns
 
@@ -211,15 +234,15 @@ $dropdown-color: #c9d1d9;
 $dropdown-link-color: #c9d1d9;
 $dropdown-link-hover-color: #f0f6fc;
 $dropdown-link-hover-bg: #21262d;
-$dropdown-link-active-color: #f0f6fc;
-$dropdown-link-active-bg: #1f6feb;
+$dropdown-link-active-color: #fff;
+$dropdown-link-active-bg: #0b4fb3;
 $dropdown-divider-bg: #30363d;
 
 // Pagination
 
 $pagination-bg: #1c2128;
 $pagination-hover-bg: #21262d;
-$pagination-active-bg: #1f6feb;
+$pagination-active-bg: #0b4fb3;
 $pagination-disabled-bg: #161b22;
 $pagination-color: #c9d1d9;
 $pagination-hover-color: #f0f6fc;
@@ -249,9 +272,9 @@ $list-group-border-color: #30363d;
 $list-group-hover-bg: #21262d;
 $list-group-action-color: #c9d1d9;
 $list-group-action-hover-color: #f0f6fc;
-$list-group-active-bg: #1f6feb;
-$list-group-active-color: #f0f6fc;
-$list-group-active-border-color: #1f6feb;
+$list-group-active-bg: #0b4fb3;
+$list-group-active-color: #fff;
+$list-group-active-border-color: #0b4fb3;
 $list-group-disabled-color: #484f58;
 $list-group-disabled-bg: #161b22;
 

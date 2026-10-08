@@ -3,7 +3,7 @@
 // rules for the plot target div. These will be cascaded down to all plot elements according to css rules
 .jqplot-target {
   position: relative;
-  color: #222;
+  color: $main-color;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
@@ -156,15 +156,15 @@ table {
     margin-bottom: 12px;
     margin-left: 12px;
     margin-right: 12px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #ccc;
+    background-color: rgba(33, 38, 45, 0.9);
+    border: 1px solid #30363d;
     position: absolute;
     font-size: 0.75em;
   }
 
   &.jqplot-cursor-legend {
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #ccc;
+    background-color: rgba(33, 38, 45, 0.9);
+    border: 1px solid #30363d;
     position: absolute;
     font-size: 0.75em;
   }
@@ -225,7 +225,7 @@ table.jqplot-cursor-tooltip {
   border: 1px solid #ccc;
   font-size: 1em;
   white-space: nowrap;
-  background: rgba(208, 208, 208, 0.8);
+  background: rgba(33, 38, 45, 0.95);
   padding: 1px;
 }
 

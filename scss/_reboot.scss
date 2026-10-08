@@ -13,7 +13,7 @@ h1 {
 h2 {
   font-weight: normal;
   padding: 10px 0 10px 3px;
-  color: #8b949e;
+  color: $fg-muted;
 }
 
 h3 {
@@ -30,4 +30,30 @@ select {
 textarea {
   font-family: $font-family-monospace;
   font-size: 1.2em;
+}
+
+// Text utilities (theme colors are tuned as backgrounds, not as text on dark surfaces)
+
+.text-primary {
+  color: $link-color !important;
+}
+
+.text-secondary {
+  color: $fg-muted-raised !important;
+}
+
+.text-success {
+  color: $fg-success !important;
+}
+
+.text-danger {
+  color: $fg-danger !important;
+}
+
+.btn-outline-success {
+  --#{$prefix}btn-color: #{$fg-success};
+}
+
+.btn-outline-danger {
+  --#{$prefix}btn-color: #{$fg-danger};
 }
